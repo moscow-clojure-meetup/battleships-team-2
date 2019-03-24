@@ -17,13 +17,14 @@
   (r/not-found {}))
 
 (def routes
-  ["/start" {:get start}])
+  ["/start" {:post start}])
 
 (defn router [req res raise]
   (defaults/wrap-defaults
-   (if-let [{:keys [handler route-params]} (bidi/match-route* routes (:uri req) req)]
-     (-> req (assoc :route-params route-params) (handler res raise))
-     (not-found req res raise))
+   (res
+    (if-let [{:keys [handler route-params]} (bidi/match-route* routes (:uri req) req)]
+      (-> req (assoc :route-params route-params) (handler res raise))
+      (not-found req res raise)))
    defaults/site-defaults))
 
 (defn main []
