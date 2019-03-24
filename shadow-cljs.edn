@@ -1,10 +1,14 @@
 {:source-paths ["src"]
  :dependencies [[cider/cider-nrepl "0.16.0-SNAPSHOT"]]
- :dev-http {8080 "public/"}
- :builds {:app {:output-dir "public/js/"
-                :asset-path "js/"
-                :target :browser
-                :modules {:main {:init-fn app.main/main!}}
-                ;; :devtools {:after-load app.main/reload!}
-                :devtools {:http-root "public"
-                           :http-port 8020}}}}
+ :dev-http     {8080 "target/"}
+ :builds       {:app
+                {:output-dir "target/"
+                 :asset-path "."
+                 :target     :browser
+                 :modules    {:main {:init-fn app.main/main!}}
+                 :devtools   {:after-load app.main/reload!}}
+                :backend
+                {:target    :node-script
+                 :main      backend.core/main
+                 :output-to "target/backend/script.js"
+                 :devtools  {:autoload true}}}}
