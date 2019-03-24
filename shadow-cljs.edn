@@ -1,9 +1,14 @@
-
 {:source-paths ["src"]
  :dependencies []
- :dev-http {8080 "target/"}
- :builds {:app {:output-dir "target/"
-                :asset-path "."
-                :target :browser
-                :modules {:main {:init-fn app.main/main!}}
-                :devtools {:after-load app.main/reload!}}}}
+ :dev-http     {8080 "target/"}
+ :builds       {:app
+                {:output-dir "target/"
+                 :asset-path "."
+                 :target     :browser
+                 :modules    {:main {:init-fn app.main/main!}}
+                 :devtools   {:after-load app.main/reload!}}
+                :backend
+                {:target    :node-script
+                 :main      backend.core/main
+                 :output-to "target/backend/script.js"
+                 :devtools  {:autoload true}}}}
