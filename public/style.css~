@@ -1,0 +1,4 @@
+.cell {
+    weight: 20px;
+    height: 20px;
+}

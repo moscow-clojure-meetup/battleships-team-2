@@ -1,12 +1,16 @@
 {:source-paths ["src"]
- :dependencies [[cider/cider-nrepl "0.16.0-SNAPSHOT"]]
- :dev-http     {8080 "target/"}
+ :dependencies [[cider/cider-nrepl "0.16.0-SNAPSHOT"]
+                [reagent "0.8.1"]]
+ 
  :builds       {:app
-                {:output-dir "target/"
+                {:output-dir "assets/"
                  :asset-path "."
                  :target     :browser
                  :modules    {:main {:init-fn app.main/main!}}
-                 :devtools   {:after-load app.main/reload!}}
+                 :dev-http   {8080 "assets/"}
+                 :devtools   {:after-load app.main/reload!
+                              :http-root "assets/"
+                              :http-port 8020}}
                 :backend
                 {:target    :node-script
                  :main      backend.core/main

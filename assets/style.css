@@ -1,0 +1,49 @@
+.row {
+  display: flex;
+  flex-direction:row;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #fa2;
+    border-style: solid;
+    border-color: red;
+    float: left;
+}
+
+.ship {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-style: solid;
+    border-color: red;
+    float: left;   
+}
+
+.beaten { 
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-style: solid;
+    border-color: red;
+    float: left;   
+}
+
+.enemy-died { 
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-style: solid;
+    border-color: red;
+    float: left;   
+}
+
+.player-died { 
+    width: 40px;
+    height: 40px;
+    background-color: purple;
+    border-style: solid;
+    border-color: red;
+    float: left;   
+}

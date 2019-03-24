@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/lib.cljs"],"mappings":";;AAGA,AAAA,AAACA;AAED,AAAA,AAAKC;AAEL,AAAA,AAAAC,AAAAC,AAAAC;AAAA;AAAA,AAAA,AAAA,AAASC","names":["cljs.core.println.cljs$core$IFn$_invoke$arity$variadic","app.lib/c","js/app","js/app.lib","js/app.lib.d","app.lib/d"],"sourcesContent":["\n(ns app.lib)\n\n(println \"[lib] loading\")\n\n(def c 1)\n\n(defonce d 2)\n"]}
