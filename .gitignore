@@ -6,4 +6,6 @@
 /*.log
 .shadow-cljs/
 
+/assets/cljs-runtime/
+
 .nrepl-port
