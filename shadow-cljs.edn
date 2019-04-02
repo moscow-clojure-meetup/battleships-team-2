@@ -1,7 +1,11 @@
 {:source-paths ["src"]
  :dependencies [[cider/cider-nrepl "0.16.0-SNAPSHOT"]
-                [reagent "0.8.1"]]
- 
+                [reagent "0.8.1"]
+                [macchiato/core "0.2.14"]
+                [mount "0.1.16"]
+                [bidi "2.1.5"]
+                [com.taoensso/timbre "4.10.0"]]
+ :dev-http {8080 "target/"}
  :builds       {:app
                 {:output-dir "assets/"
                  :asset-path "."
