@@ -1,7 +1,7 @@
 Battleships game
 ----
 
-Team 2, Moscow Clojure Meetup Dojo
+Team 2, Moscow Clojure Meetup Dojo  
 March 24th, 2019
 
 ![Screenshot](screenshot.png)
